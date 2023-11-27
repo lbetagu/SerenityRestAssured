@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        google()
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.24"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+group = 'co.com.auto'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '4.0.24'
+    implementation group: 'net.serenity-bdd', name: 'serenity-reports', version: '4.0.24'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: '4.0.24'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.16.0'
+}
+
+tasks.withType(Test) {
+    systemProperties = System.properties
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+tasks.withType(Test) {
+    systemProperty "file.encoding", "UTF-8"
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
