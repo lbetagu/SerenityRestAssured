@@ -11,20 +11,6 @@ public class Booking {
 
     private Booking() {}
 
-    public static void login() {
-        SerenityRest.given()
-                .baseUri(BaseUri.QA.getUrl())
-                .log()
-                .all()
-                .contentType(ContentType.JSON)
-                .when()
-                .post(LOGIN.getValue())
-                .then()
-                .log()
-                .all()
-                .statusCode(200);
-    }
-
     public static void getBooking() {
         SerenityRest.given()
                 .baseUri(BaseUri.QA.getUrl())

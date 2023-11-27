@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Login</title>
+    <title>Test booking by id</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -121,7 +121,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-        > Login
+        > Test booking by id
         </span>
         </div>
         <div class="rightbg"></div>
@@ -139,7 +139,7 @@
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 27-11-2023 17:56</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 27-11-2023 18:18</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -188,7 +188,7 @@
                             <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">
-                                    Login
+                                    Test booking by id
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -239,7 +239,7 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="top-level-step">
-                                                POST https://restful-booker.herokuapp.com/auth
+                                                GET https://restful-booker.herokuapp.com/booking/1
                                         </span>
                             <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -255,17 +255,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4>Response</h4>
-                                    <p>URL: https://restful-booker.herokuapp.com/auth</p>
+                                    <p>URL: https://restful-booker.herokuapp.com/booking/1</p>
                                     <p>Status code: 200</p>
                                     <p>Content Type: application/json</p>
                                     <h4>Request Headers</h4>
                                     <pre>Accept=*/*<br>Content-Type=application/json</pre>
-                                    <h4>Content Body</h4>
-                                    <pre>{<br>    &quot;username&quot;: &quot;admin&quot;,<br>    &quot;password&quot;: &quot;password123&quot;<br>}</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Server: Cowboy<br>Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1701125761&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=UksEhul6RDjIro%2FEuXSf6vWXw4OVoN8MEjwWu8k9bEg%3D&quot;}]}<br>Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1701125761&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=UksEhul6RDjIro%2FEuXSf6vWXw4OVoN8MEjwWu8k9bEg%3D<br>Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}<br>Connection: keep-alive<br>X-Powered-By: Express<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 27<br>Etag: W/&quot;1b-H/APBV+owZQUQY5WP2JcX9YlXgU&quot;<br>Date: Mon, 27 Nov 2023 22:56:01 GMT<br>Via: 1.1 vegur</pre>
+                                    <pre>Server: Cowboy<br>Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1701127112&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=q%2FnkP6R6IeySS6eWenxqFokAx6L%2B%2B5vYDi6wNSwGkwo%3D&quot;}]}<br>Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1701127112&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=q%2FnkP6R6IeySS6eWenxqFokAx6L%2B%2B5vYDi6wNSwGkwo%3D<br>Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}<br>Connection: keep-alive<br>X-Powered-By: Express<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 169<br>Etag: W/&quot;a9-OlwJEiNMULqfeDsdNgpwI/teV1s&quot;<br>Date: Mon, 27 Nov 2023 23:18:32 GMT<br>Via: 1.1 vegur</pre>
                                 <h4>Response Body</h4>
-                                    <pre>{<br>    &quot;token&quot;: &quot;36a4da93aea3d5b&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;firstname&quot;: &quot;Mark&quot;,<br>    &quot;lastname&quot;: &quot;Brown&quot;,<br>    &quot;totalprice&quot;: 297,<br>    &quot;depositpaid&quot;: true,<br>    &quot;bookingdates&quot;: {<br>        &quot;checkin&quot;: &quot;2022-05-15&quot;,<br>        &quot;checkout&quot;: &quot;2023-08-30&quot;<br>    },<br>    &quot;additionalneeds&quot;: &quot;Breakfast&quot;<br>}</pre>
                             </div>
                         </div>
                     </div>
@@ -281,7 +279,7 @@
             <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.51s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>0.5s</em></span></td>
             </tr>
 
         </table>

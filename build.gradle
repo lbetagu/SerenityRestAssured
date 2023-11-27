@@ -4,7 +4,6 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
-        google()
     }
     dependencies {
         classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.24"
@@ -14,14 +13,12 @@ buildscript {
 apply plugin: "java"
 apply plugin: "idea"
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
-apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
 group = 'co.com.auto'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    google()
 }
 
 dependencies {
