@@ -1,0 +1,4 @@
+filterId,url,headerContent,headerAuth,customerId,agreementId,dateFrom,dateTo
+active,http://localhost:8080/searches/iyo-z-n/documents,application/json,t5646443534tfd,000000000012345,1-1UW9XA9,2023-01-01,2023-12-30
+inActive,http://localhost:8080/searches/iyo-z-n/documents,application/json,t5646443534tfd,000000000012345,1-1UW9XA9,2023-01-01,2023-12-30
+active,http://localhost:8080/searches/iyo-z-n/documents,application/json,t5646443534tfd,000000000012345,1-1UW9XA9,2023-01-01,2023-12-30
