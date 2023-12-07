@@ -1,4 +1,4 @@
 #execute project using
 ```sh
-gradle clean test aggregate -i 
+gradle clean assemble test -i 
 ```
