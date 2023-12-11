@@ -1,9 +1,11 @@
 package co.com.auto;
 
+import co.com.auto.model.response.BookingModel;
 import co.com.auto.services.Auth;
 import co.com.auto.services.Booking;
 import co.com.auto.utils.CsvUtil;
 import net.serenitybdd.junit.runners.SerenityRunner;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -53,6 +55,15 @@ public class TestRunner {
 
     @Test
     public void testBookingById(){
-        Booking.getBookingById("1");
+        BookingModel bookingModel =  Booking.getBookingById("1");
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(bookingModel.getFirstName()).isEqualTo("Mary");
+        softly.assertThat(bookingModel.getLastName()).isEqualTo("Jackson");
+        softly.assertThat(bookingModel.getTotalPrice()).isEqualTo(771);
+        softly.assertThat(bookingModel.getDepositPaid()).isTrue();
+        softly.assertThat(bookingModel.getBookingDates().getCheckin()).isEqualTo("2016-10-08");
+        softly.assertThat(bookingModel.getBookingDates().getCheckout()).isEqualTo("2018-10-26");
+        //softly.assertThat(bookingModel.getAdditionalNeed()).isEqualTo("Breakfast");
+        softly.assertAll();
     }
 }

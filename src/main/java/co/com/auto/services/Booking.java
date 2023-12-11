@@ -1,11 +1,11 @@
 package co.com.auto.services;
 
+import co.com.auto.model.response.BookingModel;
 import co.com.auto.utils.BaseUri;
 import co.com.auto.utils.Resource;
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 
-import static co.com.auto.utils.Resource.LOGIN;
 
 public class Booking {
 
@@ -25,7 +25,7 @@ public class Booking {
                 .statusCode(200);
     }
 
-    public static void getBookingById(String id) {
+    public static BookingModel getBookingById(String id) {
         SerenityRest.given()
                 .baseUri(BaseUri.QA.getUrl())
                 .log()
@@ -36,6 +36,7 @@ public class Booking {
                 .then()
                 .log()
                 .all()
-                .statusCode(200);
+                .statusCode(200).extract();
+        return SerenityRest.lastResponse().as(BookingModel.class);
     }
 }
