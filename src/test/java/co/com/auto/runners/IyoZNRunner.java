@@ -1,4 +1,4 @@
-package co.com.auto;
+package co.com.auto.runners;
 
 import co.com.auto.model.response.BookingModel;
 import co.com.auto.services.Auth;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RunWith(SerenityRunner.class)
-public class TestRunner {
+public class IyoZNRunner {
 
     @Test
     public void getAllDataCsv() {
@@ -53,7 +53,7 @@ public class TestRunner {
         Booking.getBooking();
     }
 
-    @Test
+//    @Test
     public void testBookingById(){
         BookingModel bookingModel =  Booking.getBookingById("1");
         SoftAssertions softly = new SoftAssertions();

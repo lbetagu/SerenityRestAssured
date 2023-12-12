@@ -36,7 +36,7 @@ public class Booking {
                 .then()
                 .log()
                 .all()
-                .statusCode(200).extract();
+                .statusCode(200);
         return SerenityRest.lastResponse().as(BookingModel.class);
     }
 }

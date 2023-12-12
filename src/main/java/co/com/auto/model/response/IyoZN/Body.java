@@ -1,4 +1,4 @@
-package co.com.auto.model.response;
+package co.com.auto.model.response.IyoZN;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -8,11 +8,14 @@ import lombok.Getter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
-public class BookingDateModel {
+public class Body {
 
-    @JsonProperty("checkin")
-    private String checkin;
+    @JsonProperty("customerId")
+    private String customerId;
 
-    @JsonProperty("checkout")
-    private String checkout;
+    @JsonProperty("contentType")
+    private String contentType;
+
+    @JsonProperty("search")
+    private String search;
 }
