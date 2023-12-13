@@ -1,16 +1,16 @@
 package co.com.auto.utils;
 
 public enum Payload {
-    USER_NAME("username"),
-    PASSWORD("password");
+  USER_NAME("username"),
+  PASSWORD("password");
 
-    private String value;
+  private String value;
 
-    Payload(String value) {
-        this.value = value;
-    }
+  Payload(String value) {
+    this.value = value;
+  }
 
-    public String getValue() {
-        return value;
-    }
+  public String getValue() {
+    return value;
+  }
 }

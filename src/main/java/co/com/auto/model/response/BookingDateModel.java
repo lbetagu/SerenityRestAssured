@@ -10,9 +10,9 @@ import lombok.Getter;
 @Getter
 public class BookingDateModel {
 
-    @JsonProperty("checkin")
-    private String checkin;
+  @JsonProperty("checkin")
+  private String checkin;
 
-    @JsonProperty("checkout")
-    private String checkout;
+  @JsonProperty("checkout")
+  private String checkout;
 }

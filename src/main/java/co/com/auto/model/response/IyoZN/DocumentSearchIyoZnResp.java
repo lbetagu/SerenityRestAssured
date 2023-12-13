@@ -3,40 +3,45 @@ package co.com.auto.model.response.IyoZN;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
+import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
+@EqualsAndHashCode
+@ToString
 public class DocumentSearchIyoZnResp {
 
-    @JsonProperty("displayName")
-    private String displayName;
+  @JsonProperty("displayName")
+  private String displayName;
 
-    @JsonProperty("agreementNumber")
-    private String agreementNumber;
+  @JsonProperty("agreementNumber")
+  private String agreementNumber;
 
-    @JsonProperty("agreementId")
-    private String agreementId;
+  @JsonProperty("agreementId")
+  private String agreementId;
 
-    @JsonProperty("customerId")
-    private String customerId;
+  @JsonProperty("customerId")
+  private String customerId;
 
-    @JsonProperty("documentKey")
-    private String documentKey;
+  @JsonProperty("documentKey")
+  private String documentKey;
 
-    @JsonProperty("iban")
-    private String iban;
+  @JsonProperty("iban")
+  private String iban;
 
-    @JsonProperty("date")
-    private String date;
+  @JsonProperty("date")
+  private String date;
 
-    @JsonProperty("folder")
-    private String folder;
+  @JsonProperty("folder")
+  private String folder;
 
-    @JsonProperty("metadata")
-    private Metadata metadata;
+  @JsonProperty("metadata")
+  private Metadata metadata;
 
-    @JsonProperty("_links")
-    private Links links;
+  @JsonProperty("_links")
+  private Links links;
 }

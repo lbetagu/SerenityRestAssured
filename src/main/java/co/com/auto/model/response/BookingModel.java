@@ -5,27 +5,25 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
-import java.util.List;
-
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
 public class BookingModel {
-    @JsonProperty("firstname")
-    private String firstName;
+  @JsonProperty("firstname")
+  private String firstName;
 
-    @JsonProperty("lastname")
-    private String lastName;
+  @JsonProperty("lastname")
+  private String lastName;
 
-    @JsonProperty("totalprice")
-    private Integer totalPrice;
+  @JsonProperty("totalprice")
+  private Integer totalPrice;
 
-    @JsonProperty("depositpaid")
-    private Boolean depositPaid;
+  @JsonProperty("depositpaid")
+  private Boolean depositPaid;
 
-    @JsonProperty("bookingdates")
-    private BookingDateModel bookingDates;
+  @JsonProperty("bookingdates")
+  private BookingDateModel bookingDates;
 
-    @JsonProperty("additionalneeds")
-    private  String additionalNeed;
+  @JsonProperty("additionalneeds")
+  private String additionalNeed;
 }
